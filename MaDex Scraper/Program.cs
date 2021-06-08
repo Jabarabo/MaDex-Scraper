@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using System.Windows.Forms;
-using iTextSharp;
 using iTextSharp.text.pdf;
 using System.IO;
 using iTextSharp.text;
@@ -81,7 +80,7 @@ namespace MaDex_Scraper
                     {
                         Outpath = NewOutputDir.SelectedPath;
                     };
-                    string path = $"\"{Outpath}\\{PDFName}.pdf\"";
+                    string path = $"{Outpath}\\{PDFName}.pdf";
 
 
                     Document document = new Document();
@@ -95,6 +94,7 @@ namespace MaDex_Scraper
                         document.Add(image);
                     };
                     document.Close();
+                    Console.Clear();
                 }
                 else
                 {
