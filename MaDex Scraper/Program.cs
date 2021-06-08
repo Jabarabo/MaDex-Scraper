@@ -81,7 +81,7 @@ namespace MaDex_Scraper
                     {
                         Outpath = NewOutputDir.SelectedPath;
                     };
-                    string path = $"{Outpath}\\{PDFName}.pdf";
+                    string path = $"\"{Outpath}\\{PDFName}.pdf\"";
 
 
                     Document document = new Document();
